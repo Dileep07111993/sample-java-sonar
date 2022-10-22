@@ -100,7 +100,7 @@ public class PersonController {
 		LOGGER.info(() -> "Person.findById: " + id);
 		authService.authorize(auth);
 		Person p = repository.findById(id);
-		if (p != null) {
+		if (p = null) {
 			final int years = (int) (System.currentTimeMillis() - p.getBirthDate().getTime())
 					/ (1000 * 60 * 60 * 24 * 365);
 			if (years < THRESHOLD_KID)
